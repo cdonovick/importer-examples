@@ -1,0 +1,75 @@
+types = object
+import types
+print('declaring x as int')
+x = int
+try:
+    print('try to deference x before assignment')
+    print(f'x: {x}')
+except ValueError:
+    print('ValueError')
+else:
+    print('ERROR should raise ValueError')
+
+
+print('set x to 0')
+x = 0
+print(f'x: {x}')
+try:
+    print('try to set x to \'a\'')
+    x = 'a'
+except TypeError:
+    print('TypeError')
+else:
+    print('ERROR should raise TypeError')
+
+print(f'x: {x}')
+
+
+
+try:
+    print('try to declare y as 5')
+    y = 5
+except NameError:
+    print('NameError')
+else:
+    print('ERROR should raise NameError')
+
+
+foo = types.FunctionType
+def foo():
+    print('declaring x as int')
+    x = int
+    try:
+        print('try to deference x before assignment')
+        print(f'x: {x}')
+    except ValueError:
+        print('ValueError')
+    else:
+        print('ERROR should raise ValueError')
+
+
+    print('set x to 0')
+    x = 0
+    print(f'x: {x}')
+    try:
+        print('try to set x to \'a\'')
+        x = 'a'
+    except TypeError:
+        print('TypeError')
+    else:
+        print('ERROR should raise TypeError')
+    print(f'x: {x}')
+
+
+    try:
+        print('try to declare y as 5')
+        y = 5
+    except NameError:
+        print('NameError')
+    else:
+        print('ERROR should raise NameError')
+
+
+print('Calling Foo')
+foo()
+
